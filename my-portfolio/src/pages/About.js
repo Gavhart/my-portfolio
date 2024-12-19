@@ -8,9 +8,9 @@ function About() {
         {/* Profile Image */}
         <div className="flex justify-center">
         <img
-  src="/images/gavin-hart.jpeg"
+  src="/images/gavin.jpg"
   alt="Gavin Hart"
-  className="rounded-full w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 object-cover shadow-lg"
+  className="rounded-full w-10 h-10 md:w-10 md:h-10 lg:w-10 lg:h-10 object-cover shadow-lg"
 />
         </div>
         

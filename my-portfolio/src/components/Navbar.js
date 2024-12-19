@@ -1,4 +1,3 @@
-// Navbar.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,29 +10,13 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between bg-gray-100 dark:bg-gray-800 py-4 px-6 shadow-sm">
+    <nav className="bg-gray-100 dark:bg-gray-800 p-4 flex justify-between items-center">
       <h1 className="text-lg font-bold text-gray-900 dark:text-gray-50">My Portfolio</h1>
       <ul className="flex space-x-6">
-        <li>
-          <Link to="/" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/projects" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="/resume" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">
-            Resume
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">
-            Contact
-          </Link>
-        </li>
+        <li><Link to="/" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">About</Link></li>
+        <li><Link to="/projects" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">Projects</Link></li>
+        <li><Link to="/resume" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">Resume</Link></li>
+        <li><Link to="/contact" className="text-gray-900 dark:text-gray-50 hover:text-blue-500 dark:hover:text-blue-400">Contact</Link></li>
       </ul>
       <button
         onClick={toggleDarkMode}
