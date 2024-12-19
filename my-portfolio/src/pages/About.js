@@ -64,8 +64,7 @@ function About() {
             Hello, I’m <span className="text-blue-600 dark:text-blue-400">Gavin Hart</span>
           </h2>
           <p className="text-lg text-gray-800 dark:text-gray-300 leading-loose mb-4">
-            I’m a passionate <span className="font-semibold text-purple-600 dark:text-purple-400">Full Stack Developer</span> 
-            with experience in React, Node.js, and MongoDB. I love building intuitive, user-friendly applications that 
+          I’m a passionate <span className="font-semibold text-purple-600 dark:text-purple-400">Full Stack Developer</span>&nbsp;with experience in React, Node.js, and MongoDB. I love building intuitive, user-friendly applications that 
             make a positive impact. When I’m not coding, you can find me fishing or exploring new technologies to keep my skills sharp. I’m always learning and looking for new challenges, especially in design and UX, to refine my skills.
           </p>
           <p className="text-lg text-gray-800 dark:text-gray-300 leading-loose">

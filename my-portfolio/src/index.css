@@ -15,3 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav-hamburger {
+  display: block; /* Ensure it’s not hidden on mobile */
+  z-index: 50; /* Higher than other elements */
+  cursor: pointer; /* To indicate clickability */
+}
+
+@media (min-width: 768px) {
+  .nav-hamburger {
+    display: none; /* Typically hidden on larger screens */
+  }
+}
