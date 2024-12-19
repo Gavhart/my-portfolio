@@ -1,44 +1,96 @@
 // src/pages/About.js
 import React from "react";
+import { motion } from "framer-motion";
 
 function About() {
+  // Framer Motion variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
+  const buttonHover = {
+    scale: 1.05,
+    boxShadow: "0px 5px 15px rgba(0,0,0,0.3)"
+  };
+
   return (
-    <section className="bg-gray-100 py-10 px-6">
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Profile Image */}
-        <div className="flex justify-center">
-        <img
-  src="/images/gavin.jpg"
-  alt="Gavin Hart"
-  className="rounded-full w-10 h-10 md:w-10 md:h-10 lg:w-10 lg:h-10 object-cover shadow-lg"
-/>
-        </div>
+    <section className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-900 md:py-16 py-8 md:px-6 px-4 transition-colors duration-300">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-20">
         
-        {/* Text Content */}
-        <div>
-          <h2 className="text-3xl font-bold mb-4">Hello, I'm Gavin Hart</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            I’m a passionate <span className="font-semibold">Full Stack Developer</span> with experience 
-            in React, Node.js, and MongoDB. My goal is to build intuitive, user-friendly applications 
-            that have a positive impact. Outside of coding, I enjoy fishing in southeastern Idaho 
-            and experimenting with new tech stacks to keep my skills sharp.
+        {/* Decorative Animated Shapes */}
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-blue-200 dark:bg-gray-700 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse" />
+        <div className="absolute -top-32 -right-32 w-72 h-72 bg-purple-200 dark:bg-gray-600 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-ping" />
+
+        {/* Profile Image with Motion */}
+        <motion.div 
+          className="flex justify-center relative z-10"
+          variants={imageVariants}
+          initial="hidden"
+          animate="visible"
+          whileHover={{ scale: 1.05 }}
+        >
+          <img
+            src="/images/gavin.jpg"
+            alt="Gavin Hart"
+            className="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover shadow-lg border-4 border-white dark:border-gray-800 transform transition-transform duration-300"
+          />
+        </motion.div>
+        
+        {/* Text Content with Motion */}
+        <motion.div 
+          className="relative z-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-gray-50 leading-tight">
+            Hello, I’m <span className="text-blue-600 dark:text-blue-400">Gavin Hart</span>
+          </h2>
+          <p className="text-lg text-gray-800 dark:text-gray-300 leading-loose mb-4">
+            I’m a passionate <span className="font-semibold text-purple-600 dark:text-purple-400">Full Stack Developer</span> 
+            with experience in React, Node.js, and MongoDB. I love building intuitive, user-friendly applications that 
+            make a positive impact. When I’m not coding, you can find me fishing or exploring new technologies to keep my skills sharp. I’m always learning and looking for new challenges, especially in design and UX, to refine my skills.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            My background also includes developing software projects such as 
-            <span className="font-semibold"> Contact Management APIs </span>
-            and building responsive websites for real companies like SharpsTarps. 
-            I aim to grow with my next company and bring my problem-solving skills 
-            to innovative teams.
+          <p className="text-lg text-gray-800 dark:text-gray-300 leading-loose">
+            I’ve developed <span className="font-semibold text-blue-600 dark:text-blue-400">Contact Management APIs</span> and responsive websites for real 
+            companies like SharpsTarps. I’m eager to grow with my next company and bring my problem-solving skills 
+            to innovative teams that value creativity and impact.
           </p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded shadow">
+          <div className="mt-8 flex flex-wrap gap-4">
+            <motion.a 
+              href="/resume.pdf"
+              download
+              className="bg-blue-600 dark:bg-blue-500 text-white py-2 px-5 rounded-full font-medium transition-all duration-300"
+              whileHover={buttonHover}
+            >
               View My Resume
-            </button>
-            <button className="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow">
+            </motion.a>
+            <motion.a 
+              href="/contact"
+              className="bg-gray-800 dark:bg-gray-700 text-white py-2 px-5 rounded-full font-medium transition-all duration-300"
+              whileHover={buttonHover}
+            >
               Contact Me
-            </button>
+            </motion.a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
