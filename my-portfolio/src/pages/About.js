@@ -1,9 +1,9 @@
-// src/pages/About.js
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Import Link for internal navigation
 
 function About() {
-  // Framer Motion variants
+  // Framer Motion variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -49,7 +49,7 @@ function About() {
           <img
             src="/images/gavin.jpg"
             alt="Gavin Hart"
-            className="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover shadow-lg border-4 border-white dark:border-gray-800 transform transition-transform duration-300"
+            className="rounded-full w-52 h-52 md:w-56 md:h-56 object-cover shadow-lg border-4 border-white dark:border-gray-800 transform transition-transform duration-300"
           />
         </motion.div>
         
@@ -74,14 +74,12 @@ function About() {
             to innovative teams that value creativity and impact.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <motion.a 
-              href="/resume.pdf"
-              download
-              className="bg-blue-600 dark:bg-blue-500 text-white py-2 px-5 rounded-full font-medium transition-all duration-300"
-              whileHover={buttonHover}
+            <Link 
+              to="/resume"
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-2 px-5 rounded-full shadow transition-all duration-300 hover:shadow-md transform hover:scale-105"
             >
               View My Resume
-            </motion.a>
+            </Link>
             <motion.a 
               href="/contact"
               className="bg-gray-800 dark:bg-gray-700 text-white py-2 px-5 rounded-full font-medium transition-all duration-300"
