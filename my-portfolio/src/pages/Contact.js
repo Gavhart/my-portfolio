@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
-import emailjs from 'emailjs-com';
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitted, setIsSubmitted] = useState(false); // State to check submission status
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -14,26 +15,21 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = 'service_58mvqq9';
-    const templateID = 'template_ub11gq8';
-    const userID = 'gavhart';
-
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-    };
-
-    emailjs.send(serviceID, templateID, templateParams, userID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert("Message sent! We’ll get back to you soon.");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
-        alert("Something went wrong. Please try again later.");
-      });
+    // Sending email using EmailJS
+    emailjs
+      .sendForm("service_1e39klv", "template_ub11gq8", e.target, "2StX9EXyHgh171sWm")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSubmitted(true); // Set submission status to true on successful submission
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    
+    // Reset form data after submission
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -110,6 +106,12 @@ function Contact() {
                 Send Message
               </button>
             </form>
+            {/* Show confirmation message after form submission */}
+            {isSubmitted && (
+              <p className="mt-4 text-green-600 dark:text-green-400">
+                Your message has been sent successfully! We'll get back to you soon.
+              </p>
+            )}
           </div>
 
           {/* Contact Info & Social */}
