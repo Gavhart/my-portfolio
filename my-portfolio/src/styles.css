@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* General page setup */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #333;
+  }
+  
+  /* Fun container */
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(135deg, #f06, #48c6ef);
+  }
+  
+  /* Fun button */
+  .trap-button {
+    position: relative;
+    background-color: #8ECACC;
+    color: white;
+    font-weight: 600;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+  }
+  
+  /* Hover and animation effect */
+  .trap-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Active state after button click */
+  .trap-button.active {
+    background-color: #00b3b3;
+    transform: scale(1.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Text changes after clicking */
+  .trap-button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+  }
+  
+  /* Animation for the surprise message */
+  .text-center {
+    font-size: 24px;
+    font-weight: 600;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Animation for the text */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
