@@ -5,12 +5,6 @@ import { motion } from "framer-motion";
 function Projects() {
   const projectData = [
     {
-      title: "Contact Management API",
-      description: "A CRUD API using Node.js, Express, MongoDB, and Swagger documentation.",
-      link: "#",
-      image: "/images/contact-api.png"
-    },
-    {
       title: "SharpsTarps Website",
       description: "A responsive e-commerce site built with React and Tailwind CSS.",
       link: "https://www.sharpstarps.com",
@@ -25,39 +19,27 @@ function Projects() {
     {
       title: "Weather App",
       description: "A React-based weather forecast application consuming external APIs.",
-      link: "#",
+      link: "https://youtu.be/IlKO7IZq4Bw?si=qUvocMuZHyvh8PhH",
       image: "/images/weather.jpg"
     },
     {
       title: "Note Taking Mobile App",
-      description: "A mobile note-taking app built with Xamarin, focused on simplicity and offline capabilities.",
-      link: "#",
+      description: "A mobile note-taking app built with React and tailwind, focused on simplicity and offline capabilities.",
+      link: "https://github.com/Gavhart/plums",
       image: "/images/notes.jpg"
     },
     {
       title: "Headless Game Prototype",
-      description: "An experimental game without a graphical interface, focusing on gameplay mechanics and APIs.",
-      link: "#",
+      description: "An experimental game with a graphical interface, focusing on gameplay mechanics and APIs.",
+      link: "https://youtu.be/Eu19p0ufZsU?si=KFCVNZXQ7c7yR5zL",
       image: "/images/game.jpg"
     },
     {
       title: "2D Adventure Game",
-      description: "A Python-based 2D game with Pygame, featuring sprite animations and level design.",
-      link: "#",
+      description: "In this activity I added some features to a game I helped write in a previous class. The game is a intricetly designed game using the phaser library. The game is a 2d platformer where the player must destroy the spiders and avoid not die.",
+      link: "https://youtu.be/CZveA1INRc0?si=PTtm910q6VUMHRF3",
       image: "/images/2d.png"
     },
-    {
-      title: "Local Business Website",
-      description: "A simple, SEO-friendly website for a local business, built with Next.js for fast performance.",
-      link: "#",
-      image: "/images/buisness.jpg"
-    },
-    {
-      title: "Chatbot Integration Demo",
-      description: "Integrated OpenAI's API into a React app to create a functional, responsive chatbot.",
-      link: "#",
-      image: "/images/chatbot.png"
-    }
   ];
 
   return (

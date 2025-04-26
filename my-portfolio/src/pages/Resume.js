@@ -9,7 +9,7 @@ function Resume() {
         <header className="text-center mb-8">
           <h1 className="text-3xl font-extrabold mb-2">Gavin Hart</h1>
           <p className="text-gray-600 dark:text-gray-300 text-sm">
-            541-816-1922 | Har19076@byui.edu | 
+            541-816-1922 | Gavhart@yahoo.com | 
             <a 
               href="https://linkedin.com/in/gavhart" 
               target="_blank" 
@@ -24,7 +24,7 @@ function Resume() {
               rel="noreferrer" 
               className="ml-1 text-blue-600 dark:text-blue-400 hover:underline"
             >
-              https://gavhart.github.io
+              gavhart.github.io
             </a>
           </p>
           {/* Download Button */}
@@ -45,9 +45,9 @@ function Resume() {
           <div className="flex justify-between">
             <div>
               <p className="font-semibold">Brigham Young University - Idaho</p>
-              <p className="text-sm text-gray-700 dark:text-gray-300">Software Engineering - Full Stack Development</p>
+              <p className="text-sm text-gray-700 dark:text-gray-300">B.S. Software Engineering – Full Stack Development</p>
             </div>
-            <p className="text-sm text-gray-700 dark:text-gray-300">July 2024 • Rexburg</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">July 2024 • Rexburg, ID</p>
           </div>
         </section>
 
@@ -55,13 +55,24 @@ function Resume() {
         <section className="mb-8">
           <h2 className="text-xl font-bold border-b border-gray-300 dark:border-gray-700 pb-2 mb-4">Projects</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Built headless game.</li>
-            <li>Adventure game in Python.</li>
-            <li>Built a 2D game.</li>
-            <li>Weather app.</li>
-            <li>Multiple websites.</li>
-            <li>Website for local business.</li>
-            <li>Made a mobile note taking app.</li>
+            <li>
+              <strong>Hart Boys Skate Shop Website</strong> – Designed and developed a responsive skateboarding website using React and Tailwind CSS, with dynamic product displays and user-friendly navigation. This site will play a crucial role in the Owner getting brands to sponsor the shop.
+            </li>
+            <li>
+              <strong>SharpsTarps E-commerce Website</strong> – Built a full product catalog website for industrial tarps, leveraging React, Tailwind CSS, and SEO best practices to maximize user engagement and mobile responsiveness.
+            </li>
+            <li>
+              <strong>Weather Forecast App</strong> – Developed a sleek React-based application that consumes external weather APIs to deliver real-time weather updates with animated UI components.
+            </li>
+            <li>
+              <strong>Mobile Note-Taking App</strong> – Built a cross-platform mobile app using React and tailwind to allow offline note management, simple UI, and local device storage.
+            </li>
+            <li>
+              <strong>Headless Game</strong> – An experimental game with a graphical interface, focusing on gameplay mechanics and APIs.
+            </li>
+            <li>
+              <strong>2D Adventure Game and Headless Game</strong> – In this activity I added some features to a game I helped write in a previous class. The game is a intricetly designed game using the phaser library. The game is a 2d platformer where the player must destroy the spiders and avoid not die.
+            </li>
           </ul>
         </section>
 
@@ -71,38 +82,42 @@ function Resume() {
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <div>
               <p className="font-semibold">Front-end:</p>
-              <p>React, JavaScript, HTML, CSS, TypeScript, Tailwind CSS, Xamarin, Git/GitHub, Next.js, Swift</p>
+              <p>React, Next.js, JavaScript, TypeScript, Tailwind CSS, HTML, CSS, Xamarin, Swift, Git/GitHub</p>
             </div>
             <div>
               <p className="font-semibold">Back-end:</p>
-              <p>Python, C#, MySQL, MongoDB, Mongoose</p>
+              <p>Node.js, Express, Python, C#, MySQL, MongoDB, Mongoose</p>
+            </div>
+            <div>
+              <p className="font-semibold">Other Tools & Frameworks:</p>
+              <p>Framer Motion, Postman, REST APIs, Responsive Design, Agile Methodology</p>
             </div>
           </div>
         </section>
 
         {/* Extra Learning */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold border-b border-gray-300 dark:border-gray-700 pb-2 mb-4">Extra learning</h2>
+          <h2 className="text-xl font-bold border-b border-gray-300 dark:border-gray-700 pb-2 mb-4">Extra Learning</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Building an AI app like ChatGPT called ChadvinGPT (in progress). Enjoying the learning experience!</li>
-            <li>Udemy course - Building apps in React and native.</li>
+            <li>Currently building an AI-powered app inspired by ChatGPT, called <strong>ChadvinGPT</strong> (in progress).</li>
+            <li>Completed Udemy course: <strong>React Native and Full Stack App Development</strong>.</li>
           </ul>
         </section>
 
         {/* Work Experience */}
         <section>
-          <h2 className="text-xl font-bold border-b border-gray-300 dark:border-gray-700 pb-2 mb-4">Work Experience</h2>
+          <h2 className="text-xl font-bold border-b border-gray-300 dark:border-gray-700 pb-2 mb-4">Unrelated Work Experience</h2>
           <div className="flex justify-between mb-2">
             <div>
-              <p className="font-semibold">Various Companies</p>
-              <p className="text-sm text-gray-700 dark:text-gray-300">Professional Driver</p>
+              <p className="font-semibold">Professional Driver</p>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Various Companies</p>
             </div>
             <p className="text-sm text-gray-700 dark:text-gray-300">July 2019 - Present • Rexburg, ID</p>
           </div>
           <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Demonstrated exceptional punctuality, conducting comprehensive pre-departure inspections ahead of the stipulated schedule.</li>
-            <li>Cultivated a collaborative and harmonious workplace environment, emphasizing equilibrium between esteemed customers and dedicated team members.</li>
-            <li>Spearheaded the recruitment, onboarding, and oversight of a proficient team comprising more than 10 individuals, ensuring their seamless assimilation into the workforce.</li>
+            <li>Demonstrated exceptional punctuality and attention to detail through thorough vehicle inspections and time management.</li>
+            <li>Maintained a professional, customer-focused demeanor to foster positive client and coworker relationships.</li>
+            <li>Led onboarding and training for over 10 team members, enhancing team efficiency and morale.</li>
           </ul>
         </section>
       </div>
