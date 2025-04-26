@@ -17,6 +17,12 @@ function Projects() {
       image: "/images/sharpstarps.jpeg"
     },
     {
+      title: "Hart Boys Skate Shop",
+      description: "A stylish, community-driven skate shop site built with React and Tailwind CSS.",
+      link: "https://www.hartboysskateshop.com", 
+      image: "/images/Hart2.png" 
+    },
+    {
       title: "Weather App",
       description: "A React-based weather forecast application consuming external APIs.",
       link: "#",
