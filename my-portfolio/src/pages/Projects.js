@@ -13,7 +13,7 @@ function Projects() {
     {
       title: "SharpsTarps Website",
       description: "A responsive e-commerce site built with React and Tailwind CSS.",
-      link: "#",
+      link: "https://www.sharpstarps.com",
       image: "/images/sharpstarps.jpeg"
     },
     {
